@@ -6,7 +6,7 @@
     <div class="page-container">
         <h1>Sign Up</h1>
         <div id="signup-container">
-            <form id="signup-form" action="/signup" method="POST">
+            <form id="signup-form" action="/signup" method="POST" onsubmit="onSignup()">
                 <div>
                     <label for="firstName" class="form-label"><strong>First Name</strong></label>
                     <input type="text" value="${form.firstName}" name="firstName" class="form-control" id="firstName" aria-describedby="firstNameHelp">
@@ -79,12 +79,12 @@
                 </div>
                 <div>
                     <label for="password" class="form-label"><strong>Password</strong></label>
-                    <input type="password" value="${form.password}" name="password" class="form-control" id="password" aria-describedby="passwordHelp">
+                    <input type="password" name="password" class="form-control" id="password" aria-describedby="passwordHelp">
                     <div id="passwordHelp" class="form-text">Please enter a password.</div>
                 </div>
                 <div>
                     <label for="confirmPassword" class="form-label"><strong>Confirm Password</strong></label>
-                    <input type="password" value="${form.confirmPassword}" name="confirmPassword" class="form-control" id="confirmPassword">
+                    <input type="password" name="confirmPassword" class="form-control" id="confirmPassword">
                 </div>
                 <div class="to-signup-login">
                     <p>Already have an account? <a href="/login">Login here</a>.</p>
@@ -93,13 +93,14 @@
                 <button type="submit">Sign Up</button>
 
                 <f:if test="${bindingResult.hasErrors()}">
-
                     <c:forEach items="${bindingResult.getAllErrors()}" var="error">
                         <p class="signup-error">${error.getDefaultMessage()}</p>
                     </c:forEach>
-    
                 </f:if>
-                
+
+                <!-- <f:if test="!${confirmPassword}.equals(${form.password})">
+                    <p class="signup-error">Password and Confirm Password do not match.</p>
+                </f:if> -->
             </form>
         </div>
     </div>

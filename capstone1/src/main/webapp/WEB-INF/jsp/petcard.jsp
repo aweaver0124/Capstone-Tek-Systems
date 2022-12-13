@@ -30,7 +30,7 @@
                         </tr>
                     </c:forEach>
             </table>
-            <a href="/addVaccination"><button>Add A Vaccination</button></a>
+            <a href="/addVaccination/?id=${currentPet.id}"><button>Add A Vaccination</button></a>
         </div>
     </div>
     <section>

@@ -25,13 +25,13 @@ public class SignupForm {
 	
 	@NotEmpty(message= "Username is required.")
 	@Length(max = 50, message = "Username must be less than 45 characters.")
-	// @Pattern(regexp = "[a-zA-Z0-9]", message = "Username can only contain alphanumeric characters.")
+	@Pattern(regexp = "^[a-zA-Z0-9]+$", message = "Username can only contain alphanumeric characters.")
 	@UsernameUnique(message= "This username is taken. Please choose another.")
 	private String username;
 	
 	@NotEmpty(message= "Password is required.")
 	@Length(min = 8, max = 50, message = "Password must be inbetween 8 and 50 characters long.")
-	// @Pattern(regexp = "[a-zA-Z0-9!@#$%&*]", message = "Password must include at least one lowercase letter, at least one uppercase letters, and at least one special character.")
+	@Pattern(regexp = "^[a-zA-Z0-9!@#$]+$", message = "Password can only contain alphanumerical characters and special character like [!, @, #, $].")
 	private String password;
 	
 	@NotEmpty(message= "Please confirm your password.")

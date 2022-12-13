@@ -99,6 +99,18 @@ public class IndexController {
 		
 		return response;
 	}
+	
+	@RequestMapping(value = "/account", method = RequestMethod.GET)
+	public ModelAndView showUserAccount() {
+		ModelAndView response = new ModelAndView();
+		response.setViewName("myAccount");
+		
+		User user = authUser.getCurrentUser();
+		
+		response.addObject("user", user);
+		
+		return response;
+	}
 }
 
 // Later Date

@@ -6,9 +6,8 @@
 <div class="page-container" items="${user}">
     <h1>Welcome, ${user.firstName}!</h1>
 
-    <h2 id="title">Your Pets</h2>
+    <h2 id="title"><strong>Your Pets</strong></h2>
     <div id="pet-thumbnail-container">
-        <img src="../../pub/images/pawprints.jpg" alt="pawprints" height="700px" width="500px" />
             <c:forEach items="${pets}" var="pet">
                 <a href="/petcard?id=${pet.id}">
                     <div class="pet-thumbnail">
@@ -18,7 +17,6 @@
                     </div>
                 </a>
             </c:forEach>
-        <img src="../../pub/images/pawprints.jpg" alt="pawprints" height="700px" width="500px" />
     </div>
 </div>
 
