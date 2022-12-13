@@ -22,14 +22,14 @@
 <body>
     <!-- If (!user) -->
     <div id="header">
-        <div id="logo-section">
+        <div id="logo-section" class="slide-in">
             <div>
                 <img src="../../../pub/images/vax-track-icon.png" alt="vax track logo" height="100px" width="100px">
             </div>
             <div><h1>Vax Track</h1></div>
         </div>
        
-        <nav>
+        <nav class="slide-in-opp">
             <sec:authorize access="!isAuthenticated()">
             <a class="hvr-float" href="/">Home</a>
             <a class="hvr-float" href="/login">Login</a>

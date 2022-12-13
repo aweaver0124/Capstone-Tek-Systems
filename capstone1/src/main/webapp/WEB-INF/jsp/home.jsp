@@ -7,7 +7,7 @@
     <h1>Welcome, ${user.firstName}!</h1>
 
     <h2 id="title"><strong>Your Pets</strong></h2>
-    <div id="pet-thumbnail-container">
+    <div id="pet-thumbnail-container" class="fade-in">
             <c:forEach items="${pets}" var="pet">
                 <a href="/petcard?id=${pet.id}">
                     <div class="pet-thumbnail">

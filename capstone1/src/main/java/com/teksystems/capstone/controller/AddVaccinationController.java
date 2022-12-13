@@ -41,7 +41,8 @@ public class AddVaccinationController {
 	@Autowired
 	private Pet_VaccinationDAO pvDao;
 	
-	Pet_Vaccination pv = new Pet_Vaccination();
+	Pet currentPet;
+	Vaccination currentVax;
 	
 
 	@RequestMapping(value = "/addVaccination", method = RequestMethod.GET)
@@ -50,7 +51,7 @@ public class AddVaccinationController {
 		response.setViewName("addVaccination");
 		
 		List<Vaccination> vaccines = vaxDao.finbByVaccinesIdGreaterThanZero();
-		Pet currentPet = petDao.findById(id);
+		currentPet = petDao.findById(id);
 		
 		response.addObject("petId", id);
 		response.addObject("currentPet", currentPet);
@@ -69,11 +70,8 @@ public class AddVaccinationController {
 		response.addObject("vaxName", vaxName);
 		response.addObject("petId", id);
 		
-		Vaccination currentVax = vaxDao.findByNameLike(vaxName);
-		Pet currentPet = petDao.findById(id);
-		
-		pv.setPetId(currentPet.getId());
-		pv.setVaccinationId(currentVax.getId());
+		currentVax = vaxDao.findByNameLike(vaxName);
+		currentPet = petDao.findById(id);
 		
 		log.debug(currentPet.toString());
 		log.debug(currentVax.toString());
@@ -93,6 +91,10 @@ public class AddVaccinationController {
 		
 		if ( ! bindingResult.hasErrors()) {
 			
+			Pet_Vaccination pv = new Pet_Vaccination();
+			
+			pv.setPetId(currentPet.getId());
+			pv.setVaccinationId(currentVax.getId());
 			pv.setClinicName(form.getClinicName());
 			pv.setDateReceived(form.getDateReceived());
 			pv.setExpirationDate(form.getExpirationDate());

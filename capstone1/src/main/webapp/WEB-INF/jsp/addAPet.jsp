@@ -20,7 +20,7 @@
             <!-- File upload at later date -->
             <div>
                 <label for="name" class="form-label"><strong>Image</strong></label>
-                <input type="text" value="${form.image}" name="image" class="form-control" id="image" /> 
+                <input type="text" value="${form.image}" name="image" class="form-control" /> 
             </div>
             <div>
                 <label for="breed" class="form-label"><strong>Breed</strong></label>

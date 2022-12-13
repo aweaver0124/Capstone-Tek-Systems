@@ -12,16 +12,16 @@
         <div id="pet-data">
             <h3>Birthday:</h3>
             <p>${currentPet.birthDate}</p>
-            <br></br>
+            
             <h3>Gender:</h3>
             <p>${currentPet.gender}</p>
-            <br></br>
+            
             <h3>Breed:</h3>
             <p>${currentPet.breed}</p>
-            <br></br>
+           
             <h3>Personality:</h3>
             <p>${currentPet.personality}</p>
-            <br></br>
+            
         </div>
     </div>
     <h3 id="vax-details">Vaccination Details</h3>
@@ -33,7 +33,7 @@
                     <td><strong>Clinic Name</strong></td>
                     <td><strong>Date Received</strong></td>
                     <td><strong>Expiration Date</strong></td>
-                    <td><strong>Remove</strong></td>
+                    
                 </tr>
                 <c:forEach items="${vaccines}" var="vaccine">
                     <tr>
@@ -41,10 +41,11 @@
                         <td>${vaccine.clinicName}</td>
                         <td>${vaccine.dateReceived}</td>
                         <td>${vaccine.expirationDate}</td>
-                        <td><button> X </button></td>
+                        
                     </tr>
                 </c:forEach>
             </table>
+            <a href="/addVaccination/?id=${currentPet.id}"><button>Add A Vaccination</button></a>
         </div>
     </div>
 </div>

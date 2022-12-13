@@ -23,6 +23,8 @@
 
 body {
 	font-family: 'Comfortaa', cursive;
+	position: relative;
+	height : 1000px;
 }
 
 #pet-thumbnail-container a {
@@ -52,7 +54,34 @@ body {
 	padding: 15px;
 }
 
+.slide-in-opp{
+	animation-name: slideinopp;
+	animation-duration: 2s;
+}
 
+@keyframes slideinopp {
+  from {
+    margin-right: -100%;
+  }
+
+  to {
+    margin-left: 0%;
+  }
+}
+.slide-in{
+	animation-name: slidein;
+	animation-duration: 2s;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: -100%;
+  }
+
+  to {
+    margin-right: 0%;
+  }
+}
 
 .hvr-float {
   display: inline-block;
@@ -175,6 +204,13 @@ body {
 	margin-top: 0px;
 }
 
+footer {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
 #footer-section {
 	display: flex;
 	justify-content: center;
@@ -203,3 +239,40 @@ body {
   -webkit-transform: scale(1.1) rotate(4deg);
   transform: scale(1.1) rotate(4deg);
 }
+
+.wrapper{
+	display: block;
+	justify-content: center;
+	margin: 30px;
+}
+
+#add-vax-form{
+	height: 200px;
+	width: 400px;
+	text-align: center;
+	background-color: white;
+	border: 2px solid black;
+}
+
+.hide {
+	display: none;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.fade-in{ animation: fadeIn 2s; }
+
+
+
+
+
+
+
+
+
+
+
+

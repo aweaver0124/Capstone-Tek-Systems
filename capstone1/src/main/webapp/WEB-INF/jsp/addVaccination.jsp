@@ -3,17 +3,19 @@
 <jsp:include page="include/header.jsp" />
 
 <div class="page-container" items="${currentPet}">
-    <div id="add-vax-form">
-    <h3>Which vaccination did ${currentPet.name} receive?</h3>
-        <form action="/addVaccination/submit" method="GET">
-            <select name="vaxName" value="${vaxName}">
-                <c:forEach items="${vaccines}" var="vax">
-                    <option value="${vax.name}">${vax.name}</option>
-                </c:forEach>
-            </select>
-            <input type="hidden" name="petId" value="${petId}" />
-            <button type="submit">Next</button>
-        </form>
+    <div class="wrapper">
+    <div id="add-vax-form" class="slide">
+        <h3>Which vaccination did ${currentPet.name} receive?</h3>
+            <form action="/addVaccination/submit" method="GET">
+                <select name="vaxName" value="${vaxName}">
+                    <c:forEach items="${vaccines}" var="vax">
+                        <option value="${vax.name}">${vax.name}</option>
+                    </c:forEach>
+                </select>
+                <input type="hidden" name="petId" value="${petId}" />
+                <button type="submit" onclick="addClass()">Next</button>
+            </form>
+        </div>
     </div>
     <div id="append">
         <div id="add-vax-form-cont">
@@ -43,6 +45,15 @@
             </form>
         </div>
     </div>
+
+    <script>
+        function addClass(){
+
+            let hide = document.getElementsByClassName("wrapper");
+            hide.removeChild();
+        }
+
+    </script>
 
 
 <jsp:include page="include/footer.jsp" />
