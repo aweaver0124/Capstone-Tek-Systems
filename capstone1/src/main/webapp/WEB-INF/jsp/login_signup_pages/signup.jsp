@@ -3,23 +3,27 @@
 <jsp:include page="../include/header.jsp" />
 
     <!-- display flex in CSS-->
-    <div class="page-container">
-        <h1>Sign Up</h1>
+    <div class="signup-page-container">
+        <h1 class="signup-h1">Sign Up</h1>
         <div id="signup-container">
-            <form id="signup-form" action="/signup" method="POST" onsubmit="onSignup()">
+            <div id="form-img">
                 <div>
-                    <label for="firstName" class="form-label"><strong>First Name</strong></label>
-                    <input type="text" value="${form.firstName}" name="firstName" class="form-control" id="firstName" aria-describedby="firstNameHelp">
-                    <div id="firstNameHelp" class="form-text">Please enter your first name.</div>
+                    <img src="../../../pub/images/popart-signup.webp" width="500px" height="670px" style="border-radius: 10px" />
                 </div>
-                <div>
+                <form id="signup-form" action="/signup" method="POST">
+                    <div class="mb-3">
+                        <label for="firstName" class="form-label"><strong>First Name</strong></label>
+                        <input type="text" value="${form.firstName}" name="firstName" class="form-control" id="firstName" aria-describedby="firstNameHelp">
+                        <div id="firstNameHelp" class="form-text">Please enter your first name.</div>
+                    </div>
+                <div class="mb-3">
                     <label for="lastName" class="form-label"><strong>Last Name</strong></label>
                     <input type="text" value="${form.lastName}" name="lastName" class="form-control" id="lastName" aria-describedby="lastNameHelp">
                     <div id="lastNameHelp" class="form-text">Please enter your last name.</div>
                 </div>
-                <div>
+                <div class="mb-3">
                     <label for="State" class="form-label"><strong>State</strong></label>
-                    <select id="state" name="state">
+                    <select class="form-control" id="state" name="state">
                         <option value="Alabama">Alabama</option>
                         <option value="Alaska">Alaska</option>
                         <option value="Arizona">Arizona</option>
@@ -77,31 +81,31 @@
                     <input type="text" value="${form.username}" name="username" class="form-control" id="username" aria-describedby="usernameHelp">
                     <div id="usernameHelp" class="form-text">Please enter a username.</div>
                 </div>
-                <div>
-                    <label for="password" class="form-label"><strong>Password</strong></label>
-                    <input type="password" name="password" class="form-control" id="password" aria-describedby="passwordHelp">
-                    <div id="passwordHelp" class="form-text">Please enter a password.</div>
+                <div class="row">
+                    <div class="mb-3 col-6">
+                        <label for="password" class="form-label"><strong>Password</strong></label>
+                        <input type="password" name="password" class="form-control" id="password" aria-describedby="passwordHelp">
+                        <div id="passwordHelp" class="form-text">Please enter a password.</div>
+                    </div>
+                    <div class="mb-3 col-6">
+                        <label for="confirmPassword" class="form-label"><strong>Confirm Password</strong></label>
+                        <input type="password" name="confirmPassword" class="form-control" id="confirmPassword">
+                    </div>
                 </div>
-                <div>
-                    <label for="confirmPassword" class="form-label"><strong>Confirm Password</strong></label>
-                    <input type="password" name="confirmPassword" class="form-control" id="confirmPassword">
-                </div>
-                <div class="to-signup-login">
+                <div id="to-signup-login" class="mb-3">
                     <p>Already have an account? <a href="/login">Login here</a>.</p>
+                    <button type="submit" class="btn btn-primary">Sign Up</button>
                 </div>
 
-                <button type="submit">Sign Up</button>
+                <!-- <button type="submit" class="btn btn-primary">Sign Up</button> -->
 
                 <f:if test="${bindingResult.hasErrors()}">
                     <c:forEach items="${bindingResult.getAllErrors()}" var="error">
                         <p class="signup-error">${error.getDefaultMessage()}</p>
                     </c:forEach>
                 </f:if>
-
-                <!-- <f:if test="!${confirmPassword}.equals(${form.password})">
-                    <p class="signup-error">Password and Confirm Password do not match.</p>
-                </f:if> -->
             </form>
+        </div>
         </div>
     </div>
     

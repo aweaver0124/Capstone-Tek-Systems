@@ -20,8 +20,7 @@
     </div>
 </div>
 
-<script>
 
-</script>
+
 
 <jsp:include page="include/footer.jsp" /> 
