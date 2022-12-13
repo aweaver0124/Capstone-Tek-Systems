@@ -1,23 +1,20 @@
 
-@-webkit-keyframes hvr-pulse {
-  25% {
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
-  }
-  75% {
-    -webkit-transform: scale(0.9);
-    transform: scale(0.9);
-  }
+.hvr-pulse {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
 }
-@keyframes hvr-pulse {
-  25% {
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
-  }
-  75% {
-    -webkit-transform: scale(0.9);
-    transform: scale(0.9);
-  }
+.hvr-pulse:hover, .hvr-pulse:focus, .hvr-pulse:active {
+  -webkit-animation-name: hvr-pulse;
+  animation-name: hvr-pulse;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
 }
 
 .to-signup-login{
@@ -138,10 +135,71 @@ body {
 }
 
 .page-container {
-	background-image: linear-gradient(to right, white, white, white, white,  white, aqua, #804af6)
+	background-image: linear-gradient(to right, white, white, white, white,  white, aqua, #804af6);
+	padding-bottom: 100px;
 }
 
 .signup-error {
 	color: red;
 }
 
+#image-and-data{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#image {
+	margin: 70px;
+	background-color: rgba(0, 0, 255, .2);
+	border-radius: 15px;
+	padding: 20px;
+}
+
+#vax-table-container {
+	display : flex;
+	justify-content: center;
+}
+
+#vax-table{
+	text-align: center;
+}
+
+#pet-data {
+	text-align: left;
+	margin: 50px;
+}
+
+#vax-details {
+	text-align: center;
+	margin-top: 0px;
+}
+
+#footer-section {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgb(88, 88, 88);
+    font-family: 'Oleo Script', cursive;
+}
+
+
+.hvr-grow-rotate div a {
+	text-decoration: none;
+	color:white;
+}
+.hvr-grow-rotate {
+  display: flex;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+.hvr-grow-rotate:hover, .hvr-grow-rotate:focus, .hvr-grow-rotate:active {
+  -webkit-transform: scale(1.1) rotate(4deg);
+  transform: scale(1.1) rotate(4deg);
+}

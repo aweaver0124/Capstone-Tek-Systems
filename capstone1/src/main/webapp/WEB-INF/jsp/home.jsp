@@ -12,7 +12,7 @@
                 <a href="/petcard?id=${pet.id}">
                     <div class="pet-thumbnail">
                         <img src="${pet.image}" alt="${pet.name}" height="300px" width="300px">
-                        <h3 class="hvr-grow">${pet.name}</h3>
+                        <h3>${pet.name}</h3>
                         <p>Click for Details</p>
                     </div>
                 </a>
