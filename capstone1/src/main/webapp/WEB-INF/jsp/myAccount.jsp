@@ -8,7 +8,7 @@
         <div id="user-info">
             <div>
                 <h1>Hello, ${user.firstName}!</h1>
-                <br><br>
+                <br>
                 <h2>Your Information</h2>
                 <br>
                 <h3>Signed in as:</h3>
@@ -23,11 +23,16 @@
                 <h3>State:</h3>
                 <p>${user.state}</p>
             </div>
+            <div id="edit-button">
+                <a href="/editUser"><button class="hvr-ripple-out">Edit</button></a>
+            </div>
+            
             <div id="decoration">
                 <img src="../../pub/images/popart-laying-dogs.webp" alt="popart pets" height="200px" width="300px">
                 <img src="../../pub/images/popart-laying-cat.png" alt="popart pets" height="100px" width="200px"> 
             </div>
         </div>
+       
     </div>
 
     <div id="pets-hyperlink">

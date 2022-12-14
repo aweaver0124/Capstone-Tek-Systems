@@ -115,31 +115,4 @@ public class IndexController {
 	}	
 }
 
-// Later Date
 
-//on Add a pet form -- This is file upload class example
-// change this as needed in your final project 
-//@RequestMapping(value= {"/fileupload"}, method = RequestMethod.GET)
-//public ModelAndView fileUpload() {
-//	ModelAndView response = new ModelAndView();
-//	response.setViewName("fileupload");
-//	
-//	return response;
-//}
-
-// This is how/where the file upload will submit to
-//@RequestMapping(value = { "/fileuploadSubmit" }, method = RequestMethod.POST)
-//public ModelAndView fileuploadSubmit(@RequestParam MultipartFile file) throws IOException {
-//	ModelAndView response = new ModelAndView();
-//	response.setViewName("fileupload");
-//	
-//	log.debug("Filename  = " + file.getOriginalFilename());
-//	log.debug("File Size = " + file.getSize() + " bytes" );
-//	
-//	File targetFile = new File("./src/main/webapp/pub/images/" + file.getOriginalFilename());
-//	
-//    FileUtils.copyInputStreamToFile(file.getInputStream(), targetFile);
-//   
-//    response.addObject("filename", "/pub/images/" + file.getOriginalFilename());
-//	return response;
-//}

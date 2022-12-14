@@ -55,6 +55,7 @@ public class UpdateUserController {
 			user.setState(form.getState());
 			
 			userDao.save(user);
+			response.setViewName("myAccount");
 		} else {
 			response.addObject("bindingResult", bindingResult);
 			response.addObject("form", form);

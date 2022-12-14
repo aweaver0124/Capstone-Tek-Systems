@@ -14,7 +14,6 @@
                 <div id="petNameHelp" class="form-text">Please enter your pet's name.</div>
             </div>
             <div class="row">
-                
             <div class="mb-3 col-6">
                 <label for="species" class="form-label"><strong>Species</strong></label>
                 <div class="form-check">
