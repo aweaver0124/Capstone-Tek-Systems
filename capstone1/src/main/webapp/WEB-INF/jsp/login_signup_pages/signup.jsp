@@ -3,7 +3,7 @@
 <jsp:include page="../include/header.jsp" />
 
     <!-- display flex in CSS-->
-    <div class="signup-page-container">
+    <div class="page-container">
         <h1 class="signup-h1">Sign Up</h1>
         <div id="signup-container">
             <div id="form-img">
