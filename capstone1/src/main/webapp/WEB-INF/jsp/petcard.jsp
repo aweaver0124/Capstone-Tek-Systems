@@ -3,23 +3,25 @@
 
 <jsp:include page="include/header.jsp" /> 
 
-<div class="page-container" id="petcard-divs" items="${currentPet}">
+<div class="page-container-petcard" id="petcard-divs" items="${currentPet}">
     <div id="image-and-data">
         <div id="image">
-            <h2>${currentPet.name}</h2>
+            <h1>${currentPet.name}</h1>
             <img src="${currentPet.image}" alt="${currentPet.name}" height="406px" width="385px" />
         </div>
         <div id="pet-data">
-            <h3>Birthday:</h3>
+            <h2>${currentPet.name}'s Information</h2>
+            <br><br>
+            <h4>Birthday:</h4>
             <p>${currentPet.birthDate}</p>
             
-            <h3>Gender:</h3>
+            <h4>Gender:</h4>
             <p>${currentPet.gender}</p>
             
-            <h3>Breed:</h3>
+            <h4>Breed:</h4>
             <p>${currentPet.breed}</p>
            
-            <h3>Personality:</h3>
+            <h4>Personality:</h4>
             <p>${currentPet.personality}</p>
             
         </div>

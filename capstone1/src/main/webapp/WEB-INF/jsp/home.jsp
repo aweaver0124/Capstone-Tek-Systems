@@ -4,13 +4,14 @@
 <jsp:include page="include/header.jsp" /> 
 
 <div class="page-container" items="${user}">
-    <h1>Welcome, ${user.firstName}!</h1>
-
-    <h2 id="title"><strong>Your Pets</strong></h2>
+    <div id="hello">
+        <h1>Welcome, ${user.firstName}!</h1>
+    </div>
+    <h2 id="title">Your Pets</h2>
     <div id="pet-thumbnail-container" class="fade-in">
             <c:forEach items="${pets}" var="pet">
                 <a href="/petcard?id=${pet.id}">
-                    <div class="pet-thumbnail">
+                    <div class="hvr-shadow-radial">
                         <img src="${pet.image}" alt="${pet.name}" height="300px" width="300px">
                         <h3>${pet.name}</h3>
                         <p>Click for Details</p>
@@ -18,6 +19,7 @@
                 </a>
             </c:forEach>
     </div>
+    <img id="popart" src="../../pub/images/popart-dogandcat.webp" alt="dog and cat" height="300px" width="320px"/>
 </div>
 
 

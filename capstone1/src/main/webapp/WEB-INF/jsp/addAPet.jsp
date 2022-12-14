@@ -4,7 +4,7 @@
 <jsp:include page="include/header.jsp" /> 
 
 <div class="page-container">
-    <h1>Add Your Pet</h1>
+    <h1 class="signup-h1">Add Your Pet</h1>
     <div id="addpet-container">
         <div id="addpet-form-container">
         <form id="addpet-form" action="/addAPet" method="POST">
