@@ -31,7 +31,7 @@
                   </div>
             </div>
             <div class="mb-3 col-6">
-                <label for="gender" class="form-label"><strong>Gender</strong></label>
+                <label for="gender" class="form-label"><strong>Select Gender</strong></label>
                 <select class="form-control" id="gender" name="gender">
                     <option value="Male">Male</option>
                     <option value="Female">Female</option>

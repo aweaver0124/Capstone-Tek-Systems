@@ -54,10 +54,7 @@ public class SignupController {
 		for (ObjectError e : bindingResult.getAllErrors()) {
 			log.debug(e.getDefaultMessage());
 		}
-		
-//		String confirmPassword = form.getConfirmPassword();
-//		response.addObject("confirmPassword", confirmPassword);
-		
+
 		if (!bindingResult.hasErrors()) {
 			User user = new User();
 
@@ -77,12 +74,20 @@ public class SignupController {
 
 			userRoleDao.save(ur);
 			response.setViewName("login_signup_pages/login");
-			
+
 		} else {
 			response.addObject("bindingResult", bindingResult);
 			response.addObject("form", form);
 		}
 		
+		String confirmPassword = form.getConfirmPassword();
+
+		if (confirmPassword != form.getPassword()) {
+			response.addObject("confirmPassword", confirmPassword);
+			log.debug(confirmPassword);
+			log.debug(form.getPassword());
+		}
+
 		return response;
 	}
 

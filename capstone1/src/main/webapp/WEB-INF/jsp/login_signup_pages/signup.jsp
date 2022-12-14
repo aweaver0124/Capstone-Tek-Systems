@@ -22,7 +22,7 @@
                     <div id="lastNameHelp" class="form-text">Please enter your last name.</div>
                 </div>
                 <div class="mb-3">
-                    <label for="State" class="form-label"><strong>State</strong></label>
+                    <label for="State" class="form-label"><strong>Select State</strong></label>
                     <select class="form-control" id="state" name="state">
                         <option value="Alabama">Alabama</option>
                         <option value="Alaska">Alaska</option>
@@ -96,16 +96,13 @@
                     <p>Already have an account? <a href="/login">Login here</a>.</p>
                     <button type="submit" class="btn btn-primary">Sign Up</button>
                 </div>
-
-                <!-- <button type="submit" class="btn btn-primary">Sign Up</button> -->
-
-                <f:if test="${bindingResult.hasErrors()}">
-                    <c:forEach items="${bindingResult.getAllErrors()}" var="error">
-                        <p class="signup-error">${error.getDefaultMessage()}</p>
-                    </c:forEach>
-                </f:if>
             </form>
         </div>
+        <f:if test="${bindingResult.hasErrors()}">
+            <c:forEach items="${bindingResult.getAllErrors()}" var="error">
+                    <div><p class="signup-error">${error.getDefaultMessage()}</p></div>
+                </c:forEach>
+        </f:if>
         </div>
     </div>
     
