@@ -3,9 +3,10 @@
 
 <jsp:include page="include/header.jsp" /> 
 
-<div class="page-container">
+<div class="page-container-update">
     <div id="edit-user-container">
-        <form action="/editUser" method="POST">
+        <h1>Update Your Information</h1>
+        <form id="edit-user-form" action="/editUser" method="POST">
             <div class="row">
                 <div class="mb-3 col-6">
                     <label for="firstName" class="form-label"><strong>First Name</strong></label>
@@ -74,8 +75,12 @@
                 </select>
                 <div id="stateHelp" class="form-text">Please update your state.</div>
             </div>
-            <div><button type="submit" class="btn btn-primary">Update</button></div>
+            <div id="update-btn"><button type="submit" class="btn btn-primary">Update</button></div>
         </form>
+    </div>
+    <div id="update-decoration">
+        <img id="update-picture1" src="../../pub/images/popart-kitty.webp" alt="laying dog" height="300px" width="300px" />
+        <img class="update-decoration" id="update-picture2" src="../../pub/images/popart-puppy.webp" alt="laying dog" height="300px" width="300px" />
     </div>
 </div>
 
