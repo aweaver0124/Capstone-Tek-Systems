@@ -28,6 +28,7 @@ import lombok.ToString;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
+@EqualsAndHashCode
 @Entity
 @Table(name="pets")
 public class Pet {
@@ -75,5 +76,11 @@ public class Pet {
 
 	List<Vaccination> vaccinations;
 
+	public Pet(String name) {
+		super();
+		this.name = name;
+	}
+
+	
 	
 }

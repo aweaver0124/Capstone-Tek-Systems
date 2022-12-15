@@ -21,8 +21,10 @@
 	font-family: arial;
 	text-align: center;
 }
+
 #to-login-signup{
 	font-family: arial;
+	text-align: center;
 }
 
 #signup-form{
@@ -586,3 +588,91 @@ body, html {
 	margin-left: 80px;
 	margin-right: 80px;
 }
+
+#login-container {
+	display: flex;
+	justify-content: center;
+}
+	
+#login-form{
+	border-radius: 10px;
+	padding: 30px;
+	background: white;
+	height: 300px;
+	width:450px;
+}
+	
+.login-h1 {
+	margin: 40px;
+	text-align: center;
+	font-family: 'Oleo Script', cursive;
+	font-size: 55px;
+}
+
+.block {
+	display: block;
+	margin: 150px;
+}
+
+.landing-img{
+	margin: 15px;
+	
+	
+}
+
+#for-the-friends h1{
+	text-align: center;
+	font-family: 'Oleo Script', cursive;
+	font-size: 85px;
+}
+
+#landing-inline {
+	display: inline-block;
+	text-align: center;
+	width : 46%;
+	border: 2px solid black;
+	margin: 30px;
+}
+
+#landing-flex {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.block2 {
+	display: block;
+}
+
+.block2 h3{
+	text-align: center;
+	font-family: 'Oleo Script', cursive;
+	font-size: 45px;
+}
+
+#app-info {
+	width : 40%;
+	border: 2px solid black;
+	border-radius: 10px;
+	margin: 30px;
+	padding: 30px;
+	background: white;
+}
+
+.landing-p {
+	font-size: 25px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

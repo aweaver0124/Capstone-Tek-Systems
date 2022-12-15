@@ -18,7 +18,5 @@ public interface PetDAO extends JpaRepository<Pet, Long> {
 	
 	public Pet findById(Integer id);
 	
-	@Query(value = "DELETE FROM pets WHERE id = :id", nativeQuery = true)
-	public void deletePetById(Integer id);
 
 }

@@ -18,7 +18,7 @@ public interface VaccinationDAO extends JpaRepository<Vaccination, Long>  {
 	
 	public Vaccination findByNameLike(String name);
 	
-	public List<Vaccination> findById(Integer id);
+	public Vaccination findById(Integer id);
 	
 	@Query(value = "SELECT v.name, pv.clinic_name AS 'clinicName', pv.date_received AS 'dateReceived', pv.expiration_date AS 'expirationDate' from vaccinations v "
 			+ "inner join pets_vaccinations pv on pv.vaccination_id = v.id "
