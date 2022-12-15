@@ -12,7 +12,7 @@
             <c:forEach items="${pets}" var="pet">
                 <a href="/petcard?id=${pet.id}">
                     <div class="hvr-shadow-radial">
-                        <img src="${pet.image}" alt="${pet.name}" height="300px" width="300px">
+                        <img src="${pet.image}" alt="${pet.name}" height="300px" width="400px">
                         <h3>${pet.name}</h3>
                         <p>Click for Details</p>
                     </div>
