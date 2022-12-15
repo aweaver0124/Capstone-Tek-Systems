@@ -12,8 +12,7 @@ import com.teksystems.capstone.database.entity.User;
 @Repository
 public interface UserDAO extends JpaRepository<User, Long>  {
 	
-//	@Query("SELECT u FROM User u WHERE u.username = :username and u.password = :password")
-//	public User findByUsernameAndPassword(String username, String password);
+
 
 	public User findByUsername(String username);
 }
