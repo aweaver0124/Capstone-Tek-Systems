@@ -37,7 +37,7 @@
 
     <div id="pets-hyperlink">
         <h2>Your Pets</h2>
-        <c:forEach items="${user.pets}" var="pet">
+        <c:forEach items="${pets}" var="pet">
             <a href="/petcard?id=${pet.id}"><h3>${pet.name}</h3></a>
         </c:forEach>
     </div>

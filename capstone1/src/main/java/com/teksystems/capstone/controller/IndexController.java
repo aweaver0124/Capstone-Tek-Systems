@@ -108,7 +108,9 @@ public class IndexController {
 		response.setViewName("myAccount");
 		
 		User user = authUser.getCurrentUser();
+		List<Pet> pets = petDao.findByUserId(user.getId());
 		
+		response.addObject("pets", pets);
 		response.addObject("user", user);
 		
 		return response;
